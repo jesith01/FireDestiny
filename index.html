@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimalist Radio App</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="radio">
-      <audio id="radio" src="https://stream-150.zeno.fm/c53837nutzzuv?zs=HdPSFWbnQuacpuKcg19Sog" controls></audio>
-      <div class="audio-waves"></div>
+    <div class="container">
+        <div class="phone-screen">
+            <h1 class="title">FIRE DESTINY</h1>
+            <div class="cover-container pulse">
+                <img src="https://i.ibb.co/2KcF2Tb/Group-28-2.png" alt="Carátula" class="cover">
+            </div>
+            <p id="songTitle" class="song">En las calles y en las vias</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+                <div class="progress-bar-fill"></div> <!-- Barra de progreso que se llena -->
+                <div class="time-display">0:00 / 3:45</div>
+            </div>
+            <audio id="audioPlayer" src="https://stream-150.zeno.fm/c53837nutzzuv?zs=HdPSFWbnQuacpuKcg19Sog" preload="auto"></audio>
+            <button id="playPauseBtn" class="control-btn">Play</button>
+            <!-- Agregamos el punto verde -->
+            <div class="dot"></div>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
