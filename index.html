@@ -1,30 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Música</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="phone-screen">
-            <h1 class="title">FIRE DESTINY</h1>
-            <div class="cover-container pulse">
-                <img src="https://i.ibb.co/2KcF2Tb/Group-28-2.png" alt="Carátula" class="cover">
-            </div>
-            <p id="songTitle" class="song">En las calles y en las vias</p>
-            <div class="progress-bar-container">
-                <div class="progress-bar"></div>
-                <div class="progress-bar-fill"></div> <!-- Barra de progreso que se llena -->
-                <div class="time-display">0:00 / 3:45</div>
-            </div>
-            <audio id="audioPlayer" src="https://stream-150.zeno.fm/c53837nutzzuv?zs=HdPSFWbnQuacpuKcg19Sog" preload="auto"></audio>
-            <button id="playPauseBtn" class="control-btn">Play</button>
-            <!-- Agregamos el punto verde -->
-            <div class="dot"></div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="container">
+   <div class="player">
+     <!-- Botones de redes sociales en la parte superior -->
+     <div class="player__social player__social--top" style="margin-top: 20px;">
+       <!-- Botón de Instagram -->
+       <a href="https://instagram.com/fire_destiny.emisora.online?igshid=ZDdkNTZiNTM=" target="https://instagram.com/fire_destiny.emisora.online?igshid=ZDdkNTZiNTM=" class="player__btn player__btn--small">
+         <i class="fab fa-instagram"></i>
+       </a>
+       <!-- Espacio entre los botones -->
+       <div style="width: 20px;"></div>
+       <!-- Botón de Facebook -->
+       <a href="https://www.facebook.com/profile.php?id=100071254874918&mibextid=ZbWKwL" target="https://https://www.facebook.com/profile.php?id=100071254874918&mibextid=ZbWKwL" class="player__btn player__btn--small">
+         <i class="fab fa-facebook-f"></i>
+       </a>
+       <!-- Espacio entre los botones -->
+       <div style="width: 20px;"></div>
+       <!-- Botón de WhatsApp -->
+       <a href="https://chat.whatsapp.com/G6SELsxIcq33X6EZbpmeNZ" target="_blank" class="player__btn player__btn--small">
+         <i class="fab fa-whatsapp"></i>
+       </a>
+     </div>
+
+      <!-- Portada del álbum -->
+     <div class="player__album" style="margin-top: 20px;">
+       <img src="https://i.ibb.co/sqJWRGY/Group-28-2.png" alt="Group-28-2" alt="Album Cover" class="player__img" loading="lazy" />
+     </div>
+
+     <!-- Resto del reproductor -->
+
+     <!-- Artista y nombre de la canción -->
+     <h2 class="player__artist">Fire Destiny</h2>
+     <h3 class="player__song">On line</h3>
+
+     <!-- Barra de progreso y duración -->
+     <input type="range" value="20" min="0" class="player__level" id="range" />
+     <div class="audio-duration">
+       <div class="start">00:01</div>
+       <div class="end">04:30</div>
+     </div>
+
+     <!-- Reproductor de audio -->
+     <audio class="player__audio" controls id="audio">
+       <source src="https://stream-150.zeno.fm/c53837nutzzuv?zs=5Fr8XLrXTGKMXdiMMsnrow" type="audio/mpeg" />
+     </audio>
+
+     <!-- Botón de reproducción -->
+     <div class="player__controls">
+       <div class="player__btn player__btn--medium blue play" id="play">
+         <i class="fas fa-play play-btn"></i>
+         <i class="fas fa-pause pause-btn hide"></i>
+       </div>
+     </div>
+
+     <!-- Botones de redes sociales en la parte inferior -->
+     <div class="player__social player__social--bottom">
+       <!-- Botón de YouTube -->
+       <a href="https://www.youtube.com/" target="_blank" class="player__btn player__btn--small">
+         <i class="fab fa-youtube"></i>
+       </a>
+       <!-- Espacio entre los botones -->
+       <div style="width: 20px;"></div>
+       <!-- Botón de TikTok -->
+       <a href="https://www.tiktok.com/@firedestinyemisoramotera?_t=8b2IShZsJlt&_r=1" target="https://www.tiktok.com/@firedestinyemisoramotera?_t=8b2IShZsJlt&_r=1" class="player__btn player__btn--small">
+         <i class="fab fa-tiktok"></i>
+       </a>
+       <!-- Espacio entre los botones -->
+       <div style="width: 20px;"></div>
+       <!-- Botón del sitio web -->
+       <a href="https://www.ejemplo.com/" target="_blank" class="player__btn player__btn--small">
+         <i class="fas fa-globe"></i>
+       </a>
+     </div>
+   </div>
+</div>
